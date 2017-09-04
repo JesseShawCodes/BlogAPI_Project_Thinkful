@@ -6,6 +6,8 @@ const bodyParser = require('body-parser');
 const {BlogPosts} = require('./model');
  
 const jsonParser = bodyParser.json();
+
+//initiate a new express app
 const app = express();
 
 //log the http layer
