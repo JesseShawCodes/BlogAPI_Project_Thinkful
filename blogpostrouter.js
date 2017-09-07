@@ -36,6 +36,11 @@ router.delete('/:id', (req, res) => {
 	res.status(204).end();
 })
 
+router.get('/:id', (req, res) => {
+	//Get blog post by ID
+	res.json(BlogPosts.get(req.params.id));
+});
+
 router.put('/:id', jsonParser, (req, res) => {
 	const requiredFields = ['title', 'content', 'author', 'id'];
 	for (let i = 0; i < requiredFields.length; i++) {
