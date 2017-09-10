@@ -36,11 +36,6 @@ app.get('/posts/:id', (req, res) => {
     });
 });
 
-app.get('/testmongo', (req, res) => {
-  res.send(global.DATABASE_URL);
-});
-
-
 app.post('/posts', (req, res) => {
   const requiredFields = ['title', 'content', 'author'];
   for (let i=0; i<requiredFields.length; i++) {
